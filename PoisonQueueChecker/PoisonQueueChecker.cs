@@ -40,7 +40,7 @@ internal static class PoisonQueueChecker
                             if (message != null)
                             {
                                 anyPoisonItems = true;
-                                Console.WriteLine($"{queue.Name} - {message.InsertedOn}");
+                                Console.WriteLine($"{queue.Name} - {message.InsertedOn} - ID: {message.MessageId}");
                                 var base64 = Encoding.UTF8.GetString(message.Body);
                                 Console.WriteLine($"{TransformToReadableString(base64)}");
                             }

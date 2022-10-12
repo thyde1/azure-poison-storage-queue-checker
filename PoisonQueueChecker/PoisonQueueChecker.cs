@@ -42,7 +42,7 @@ internal static class PoisonQueueChecker
                                 anyPoisonItems = true;
                                 Console.WriteLine($"{queue.Name} - {message.InsertedOn}");
                                 var base64 = Encoding.UTF8.GetString(message.Body);
-                                Console.WriteLine($"{TransofrmToReadableString(base64)}");
+                                Console.WriteLine($"{TransformToReadableString(base64)}");
                             }
                         }
                     }
@@ -67,7 +67,7 @@ internal static class PoisonQueueChecker
         Console.WriteLine("---");
     }
 
-    private static string TransofrmToReadableString(string input)
+    private static string TransformToReadableString(string input)
     {
         Span<byte> buffer = new Span<byte>(new byte[input.Length]);
         var isBase64 = Convert.TryFromBase64String(input, buffer, out var bytesParsed);

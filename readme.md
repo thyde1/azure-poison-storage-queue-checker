@@ -12,7 +12,8 @@ Create user secrets in the format
       "Name": "{{ACCOUNT DISPLAY NAME}}",
       "ConnectionString": "{{STORAGE ACCOUNT CONNECTION STRING}}"
     }
-  ]
+  ],
+  "LogMessages": false
 }
 ```
 Run!
